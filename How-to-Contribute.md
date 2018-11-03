@@ -50,6 +50,16 @@ If you are on Windows or Linux 64 bit systems and would like to compile to 32 bi
 
 **Note:** For more information on how to install NPM modules globally on UNIX systems without resorting to `sudo`, refer to [this guide](http://www.johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/).
 
+
+**Troubleshooting Steps:** Based on existing system environment and various factors, you may bump into environment issues while setting up the above. Particularly with _Windows Build Tools_ and installing dependencies using _yarn_. Below are some of the common errors while setting up on a Windows Machine...
+1. Use `--vs2015` flag for installing `windows-build-tools` module.
+2. node-gyp path and configuration: Follow the steps [here](https://github.com/nodejs/node-gyp#installation), particularly look for...
+  - Update npm and node-gyp config for python path
+  - Update npm config for vs version
+  - Create environment variable `npm_config_node_gyp` pointing to `node-gyp.js`
+3. Windows SDK 8.1 not found: If you face an error stating that Windows 8.1 SDK is not found, create an environment variable `WindowsSdkDir` and point it to `C:\Program Files (x86)\Windows Kits\8.1`. Add the path in PATH variable as well.
+4. Windows SDK 8.1 includes not found: If you face an error stating that Windows 8.1 SDK is not found, add `C:\Program Files (x86)\Windows Kits\8.1\Include` to PATH variable.
+
 ### Build
 
 From a terminal, where you have cloned the `vscode` repository, execute the following command to run the TypeScript incremental builder:
