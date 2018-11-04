@@ -58,8 +58,8 @@ Based on existing system environment and various factors, you may bump into envi
     - npm and node-gyp config for python path
     - npm config for vs version
     - Environment variable `npm_config_node_gyp` pointing to `node-gyp.js` path
-3. If you face issue where Windows SDK 8.1 isn't found, create an environment variable `WindowsSdkDir` and pointing to the SDK folder, should be at `C:\Program Files (x86)\Windows Kits\8.1`, add it to PATH variable as well. The environment variable name comes from the targets file mentioned in the error log.
-4. If you face issue where the Windows SDK headers aren't found, add the path to include directory in SDK folder to PATH variable.
+3. If you face issue where Windows SDK 8.1 isn't found, create an environment variable `WindowsSdkDir` pointing to the SDK folder, should be at `C:\Program Files (x86)\Windows Kits\8.1`, add it to PATH variable as well. The environment variable name comes from the targets file mentioned in the error log.
+4. If you face issue where the Windows SDK headers aren't found, add the path to SDK's `include` directory to PATH variable.
 
 ### Build
 
